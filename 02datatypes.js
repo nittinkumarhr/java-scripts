@@ -1,45 +1,35 @@
-'use strict'//# :=> treat all js code  as newer version
+const accountId =1234433;//#endregion:=>   NO Change the value of varible 
+let accountPassword ='12344';//#endregion:=> NO Change the value of varible 
+var accountEmail ='nitin@gmail.com';//#endregion:=> Change the value of varible 
+accountCity ='Bijnor';//#endregion:=> Change the value of varible 
+let accountState;//#region  undefined 
 
-
-// alert(3+8) :=> we are useing node js not Browser 
-
- console.log (3+ 
-    5
- )//#endregion code readabilty should be high 
-
-
- let name ='nitin'
- let age =19
- let islogin = true
-
-//  number => 2 to power 53
-// bigint
-// string =>"nitn"
-
-// boolean => true/flase
-// null =>  standlone value /emty varible 
-//  undefind =>  no vaule asgin
-// ! symbol 
-
-
-
-
-//  Object 
-
-
-// console.log(typeof "nitn")
-console.table(['String :=>'+typeof'nitin','number :=>'+ typeof 123,'Undefinded varibles :=>'+ typeof undefined ,'null value :=>'+typeof null])
-
-
-
-/*NOTE - note : output of the program 
-
-─────────┬────────────────────────────────────┐
-│ (index) │               Values               │
-├─────────┼────────────────────────────────────┤
-│    0    │         'String :=>string'         │
-│    1    │         'number :=>number'         │
-│    2    │ 'Undefinded varibles :=>undefined' │
-│    3    │       'null value :=>object'       │
-└─────────┴────────────────────────────────────┘
+// accountId =2; no change the value of varible 
+accountEmail='nk@gmail.com';
+accountPassword='778889';
+accountCity='noida';
+console.log('nitin kumar')
+// xsxsxs
+console.log(accountId)//#endregion print the only one varible 
+console.table([accountId,accountEmail,accountPassword,accountCity,accountState])
+/*NOTE - 
+NO us the  var  because  of issue in the blouck scope and  functional scope 
+// *
+/*!SECTION
+out put of the code 
+┌─────────┬────────────────┐
+│ (index) │     Values     │
+├─────────┼────────────────┤
+│    0    │    1234433     │
+│    1    │ 'nk@gmail.com' │
+│    2    │    '778889'    │
+│    3    │    'noida'     │
+│    4    │   undefined    │
+└─────────┴────────────────┘
 */
+console.log('nk@gmail');
+
+
+
+
+
