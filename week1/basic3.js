@@ -52,18 +52,24 @@ console.log(2!=1)// return flase
 console.log("2">1)
 console.log("02">1)
 
-console.log(null>0)
-console.log(null>=0)
-console.log(null<0)
-console.log(null<=0)
-console.log(null==0)
+console.log('null:',null>0)//null: false
+console.log('null:',null>=0)//null: true
+console.log('null:',null<0)//null: flase
+console.log('null:',null<=0)// null: true
+console.log('null:',null==0)// null: false
 
 
-console.log(undefined==0)
-console.log(undefined>0)
-console.log(undefined>=0)
-console.log(undefined<0)
-console.log(undefined<=0)
+console.log('undefined:',undefined==0)// undefined: false
+console.log('undefined:',undefined>0)// undefined: false
+console.log('undefined:',undefined>=0)// undefined: false
+console.log('undefined:',undefined<0)// undefined: false
+console.log('undefined:',undefined<=0)// undefined: false
+
+
+
+// === -> strickly equal to it is check value and data types
+console.log("2"===2)// Return flase
+
 
 
 
