@@ -155,5 +155,153 @@ exampleLet();`
 
 ---
 
-## comparison of datatypes   
+## comparison of datatypes  => 
+
+* Equality (==) and Inequality (!=) =>
+   
+    - These operators convert the operands to the same type before making the comparison.
+
+* Strict Equality (===) and Strict Inequality (!==)  
+ =>
+
+   -  These operators do not convert the operands to the same type. Both value and type must be the same to return true.
+
+---
+
+
+#   data summary =>
+
+
+* 
+
+| Type       | Type of Return Value | Object Wrapper |
+|------------|----------------------|----------------|
+| Null       | "object"             | N/A            |
+| Undefined  | "undefined"          | N/A            |
+| Boolean    | "boolean"            | Boolean        |
+| Number     | "number"             | Number         |
+| BigInt     | "bigint"             | BigInt         |
+| String     | "string"             | String         |
+| Symbol     | "symbol"             | Symbol         |
+
+
+---
+ 
+# Memory Management   
+
+* JavaScript has an automatic memory management system, primarily utilizing garbage collection to reclaim memory that is no longer in use.
+
+  Primitive Types (number, string, boolean, null, undefined, symbol, bigint)=>:stack is used for static memory allocation, such as primitive types and function calls. 
+
+  Reference Types (array, function, object):heap is used for dynamic memory allocation, such as objects, arrays, and functions. 
+
+* This changes only v2. The value of v1 remains unchanged because v1 and v2 are independent copies of the string.
+
+* Primitive Values: 
+                In JavaScript, primitive values (such as strings, numbers, booleans, etc.) are copied by value. 
+                This means that when you assign one variable to another varible, a new copy of the value is created. 
+                Changes to one variable do not affect the other.
+Independent Copies: v1 and v2 are independent copies of the string value. Changing v2 does not change v1.
+
+
+* Since d1 and d2 refer to the same object, this change is reflected in both d1 and d2.
+
+* Objects by Reference: In JavaScript, objects are assigned and copied by reference, not by value.
+Shared Reference: Both d1 and d2 refer to the same object in memory. Changing the object via one reference affects  the boths.
+
+
+---
+
+# String =>
+
+* string is set of charcater
+
+* immutable=>:once a string is created, it cannot be changed.Any operation that appears to modify a string actually creates a new string.
+
+* three way to declare the string 
+
+  1. let str1 = "Hello, World!";//Using double quotes
+
+  2. let str2 = 'Hello, World! 2';//Using single quotes
+
+  3. let str3 = `Hello, World! 3`;//Using backticks (template literals)
+
+# String Properties and Methods   =>
+
+* The **length()** property returns the number of characters in a string.
+
+* You can access individual characters in a string using **bracket notation[]**.
+
+* **charAt(index)** Returns the character at the specified index.
+
+* **indexOf(substring)** Returns the index of the first occurrence of the specified substring, or -1 if not found.
+
+* **slice(start, end)** Extracts a section of a string and returns it as a new string.
+
+* **substring(start, end)** Similar to slice, but does not accept negative indices.
+ 
+* **substr(start, length)** Extracts a substring starting from the start index and extending for a given number of characters (length).
+
+* **toUpperCase()** Converts the entire string to uppercase.
+
+* **toLowerCase()** Converts the entire string to lowercase.
+
+* **replace(substring, newSubstring)** Replaces the first occurrence of a substring with a new substring.
+
+* **split(separator)** Splits the string into an array of substrings based on the specified separator.
+
+* **trim()** Removes whitespace from both ends of a string.
+
+
+---
+
+# NUMBER AND MATHS
+
+
+* **JavaScript has only one type for numbers, which can represent both integer and floating-point values.**
+
+### Number Methods  =>
+
+* **toFixed()** Formats a number to a fixed number of decimal places.
+
+* **toString()** Converts a number to a string.
+
+* **parseInt()** Parses a string and returns an integer. 
+
+* **parseFloat()** Parses a string and returns a floating-point number.
+
+### MATHS  =>
+
+* The Math object provides properties and methods for mathematical constants and function
+
+### Commonly Used Methods =>
+
+* **Math.abs(x)** Returns the absolute value of x.
+
+* **Math.ceil(x)** Rounds x up to the nearest integer.
+
+* **Math.floor(x)** Rounds x down to the nearest integer.
+
+
+* **Math.round(x)** Rounds x to the nearest integer.
+
+* **Math.max(...values)** Returns the largest of zero or more numbers.
+
+* **Math.min(...values)** Returns the smallest of zero or more numbers.
+
+* **Math.pow(base, exponent)** Returns the base to the power of the exponent.
+
+* **Math.sqrt(x)** Returns the square root of x.
+
+* **Math.random()** Returns a random number between 0 (inclusive) and 1 (exclusive).
+
+  - Example :)
+
+  ` console.log(Math.random())
+console.log((Math.random()*10)+1)
+console.log(Math.floor(Math.random()*10)+1)
+const min=10
+const max=20
+console.log(Math.floor(Math.random() * (max-min+1)+min))  `
+
 
