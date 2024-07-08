@@ -68,3 +68,84 @@
 * **Array flat()  :** THis method in JavaScript creates a new array with all sub-array elements concatenated into it recursively up to the specified depth. If no depth is provided, it defaults to 1.
 
 **More about the  Array**   [click](https://www.geeksforgeeks.org/javascript-array-map-method/?ref=lbp)
+
+---
+
+## *Objects*
+
+* objects are like containers that can hold multiple values at once
+
+* Data store in key and value format
+
+### Creating Objects
+
+* Objects can be created using two different methodologies namely Literal Form and Constructed Form.
+
+1. ### Literal Form
+
+         let obj = {
+                key1: value1,
+                key2: value2,
+                ...
+            };
+
+2. ###  Constructed Form / singleton  objects
+
+         let obj = new Object();
+            obj.key1 = value1;
+            obj.key2 = value2;
+
+## Differences between using Object Literals and the Constructed Form
+
+* Both the constructed form and literal form result in creating exactly the same sort of object i.e. the end result is the same for both methodologies.
+
+### Methods of an objects :)
+
+* **assign() :** method is used to copy the values and properties from one or more source objects to a target object.
+
+    `let obj1 = { a: 10 };
+    let obj2 = { b: 20 };
+    let obj3 = { c: 30 };
+    // Creating a target object and copying values
+    // and properties to it using object.assign() method
+    let new_obj = Object.assign({}, obj1, obj2, obj3);`
+* **entries() :** method is used to return an array consisting of enumerable property [key, value] pairs of the object which are passed as the parameter.
+
+    `// Creating an object constructor
+// and assigning values to it
+const obj = { 0: 'adam', 1: 'billy', 2: 'chris' }; 
+// Displaying the enumerable property [key, value]
+// pairs of the object using object.entries() method
+console.log(Object.entries(obj)[1]);`
+
+* **freeze()  :**  method is used to freeze an object. Freezing an object does not allow new properties to be added to the object and prevents removing or altering the existing properties.
+
+    `const obj1 = { property1: 'initial_data' }; 
+// creating a second object which will freeze 
+// the properties of the first object 
+const obj2 = Object.freeze(obj1); 
+// Updating the properties of the frozen object 
+obj2.property1 = 'new_data'; 
+// Displaying the properties of the  frozen object  
+console.log(obj2.property1);`
+
+* **hasOwn() :** method is used to check if the object has the specified property or not. It returns true if the property exists else false. This method was introduced as a replacement for the Object.hasOwnProperty() method. 
+
+    `let details = { 
+    name: "Raj", 
+    course: "DSA", 
+    website: "geeksforgeeks.org", 
+} 
+console.log(Object.hasOwn(details, 'name')); 
+console.log(Object.hasOwn(details, 'course')); 
+console.log(Object.hasOwn(details, 'phone number'));`
+
+* **is() :** method is used to compare if two values are the same value.
+
+    `console.log(Object.is(5, 5)); // true
+console.log(Object.is(5, '5')); // false
+console.log(Object.is(NaN, NaN)); // true
+console.log(Object.is(0, -0)); // false`
+
+
+### more about Objects  [*Click here*](https://www.geeksforgeeks.org/javascript-object-values-method/?ref=lbp)
