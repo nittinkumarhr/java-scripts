@@ -14,7 +14,8 @@
 
     `function multiplefun(...num){
     return num
-    }
+    } 
+
     console.log(multiplefun(12,23,45,43,21))// return the first ietms`
 
 ## Scopes
@@ -49,7 +50,6 @@
             myFunction();
             console.log(functionScopedVar); // Error: functionScopedVar is not defined
             `
-        
 
 ### Block Scope :)
 
@@ -59,7 +59,33 @@
     let blockScopedVar = "I am a block-scoped variable";
     console.log(blockScopedVar); // Accessible here
     }
-    console.log(blockScopedVar); // Error: blockScopedVar is not defined `
+    console.log(blockScopedVar); // Error: blockScopedVar is not defined`
+
+## pure Functions :)
+
+* Pure functions are functions that always return the same result when given the same arguments.
+
+* A Pure Function is a function (a block of code) that always returns the same result if the same arguments are passed .
+
+* It does not depend on any state or data change during a program’s execution. Rather, it only depends on its input arguments.
+
+* It does not produce any observable side effects such as modifying arguments or global variables, or performing I/O operations (like printing to the console or reading/writing to a file).
+
+    `function add(a, b) {
+        return a + b;
+    }
+    console.log(add(2, 3)); // Output: 5`
 
 
-        
+## Closures :
+* A closure is a function that remembers its outer variables and can access them. It is created when a function is declared inside another function. The inner function has access to the variables of the outer function, even after the outer function has finished executing. This allows the inner function to "remember" and use the variables from the outer function, even when it is called later.
+
+    `function outerFunction() {
+        var outerVar = "I am an outer variable";
+        function innerFunction() {
+            console.log(outerVar); // Accessing the outer variable
+        }
+        return innerFunction;
+    }
+    var myClosure = outerFunction();
+    myClosure(); // Output: I am an outer variable`
