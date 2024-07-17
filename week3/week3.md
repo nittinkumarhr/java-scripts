@@ -204,7 +204,15 @@
     `var x = null;
     var y = x ?? "default value";
     console.log(y); // Output: "default value"`
-    * This operator is useful for providing default values for variables that may be `null` or `undefined`.
+    * This operator is useful for providing default vDear Hiring Team,
+
+I am writing to express my enthusiasm for the Fresher job at your company. I have hands-on experience in PYTHON, SQL, PHP JAVA, HTML, CSS, C, etc. During my previous internship at Cloudshope Technologies, I honed my analytical skills and I am eager to leverage them to contribute to your team. I have attached my resume and cover letter for your review and am looking forward to discussing this opportunity with you.
+
+Best regards,
+
+NITIN KUMAR
+nnitgin@gmail.ocm
+6397893408alues for variables that may be `null` or `undefined`.
 
 * ## Tenary opertor :
     * The ternary operator is a shorthand way of writing an `if-else` statement.
