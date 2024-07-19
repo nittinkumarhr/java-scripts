@@ -121,3 +121,49 @@ for (variable of iterable) {
 ```
 
 * - In this syntax, the variable is assigned the value of each element of the iterable, and the code block is executed for each element.
+
+## Map 
+* - Map is a collection of key-value pairs.
+* - The syntax of Map is as follows:
+
+```
+let map = new Map();
+```
+
+* - In this syntax, a new Map object is created.
+
+## Filter
+* - Filter is a method that creates a new array with all elements that pass the test implemented by the provided function.
+* - The syntax of filter is as follows:
+
+```
+let newArray = array.filter(function(currentValue, index, arr), thisValue);
+```
+
+* - In this syntax, the function is executed for each element of the array, and the elements that pass the test are added to the new array.
+
+* - The function takes three parameters:
+    * - currentValue: The current element being processed in the array.
+    * - index (optional): The index of the current element being processed in the array.
+    * - arr (optional): The array filter was called upon.
+* - The thisValue parameter is optional and can be used to specify the value of this inside the function.
+
+## Reduce
+* - Reduce is a method that executes a reducer function on each element of the array, resulting in a single output value.
+* - The syntax of reduce is as follows:
+
+```
+let accumulator = array.reduce(function(accumulator, currentValue, index, arr), initialValue);
+```
+
+* - In this syntax, the function is executed for each element of the array, and the result is accumulated in the accumulator variable.
+* - The function takes four parameters:
+* - accumulator: The accumulator accumulates the callback's return values; it is the accumulated value previously returned in the last invocation of the callback, or initialValue, if supplied.
+* - currentValue: The current element being processed in the array.
+* - index (optional): The index of the current element being processed in the array.
+* - arr (optional): The array reduce was called upon.
+* - initialValue (optional): A value to use as the first argument to the first call of the callback.
+* - The initialValue parameter is optional and can be used to specify the initial value of the accumulator.
+If initialValue is not provided, the first element in the array will be used as the initial value, and the reduce function will start processing from the second element.
+
+* - The reduce function returns the final accumulated value.
