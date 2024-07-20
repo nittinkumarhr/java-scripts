@@ -1,4 +1,4 @@
-/////// fillters -:// filter() method creates a new array with all elements that pass the test implemented by the provided function.
+// fillters -:// filter() method creates a new array with all elements that pass the test implemented by the provided function.
 //provide function that returns the values if condtions is true
 //return new {array with all elements that pass the test.
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
