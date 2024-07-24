@@ -2,7 +2,7 @@
 
 ## Loops:)
 
-* - Loops are used to repeat a block of code until a specific condition is met.
+* - Loops are used to repeat a block of code  until a specific condition is met.
 * - There are three types of loops in Python: for loop, while loop, and nested loop.
 * - For loop is used when we know the number of iterations in advance.
 * - While loop is used when we don't know the number of iterations in advance.

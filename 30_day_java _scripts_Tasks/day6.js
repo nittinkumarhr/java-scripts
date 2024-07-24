@@ -1,4 +1,4 @@
-//// Day -:6 Arrays
+-0//// Day -:6 Arrays
 // Aactivity 1 :-Arrays accessing and declaration
 // Task 1 : create of number form 1 to 5 
 let arr=[1,2,3,4,5] 
