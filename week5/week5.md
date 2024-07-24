@@ -140,4 +140,16 @@ The document is the root of the DOM hierarchy. It represents the entire HTML or 
 - We can add event listeners by using **event** object.
 - We can add event listeners by using **event.preventDefault()** method.
 
+## Defernce between **innerHTML** and **textContent** :
+- **innerHTML** is used to get or set the HTML content of an element.
+- **textContent** is used to get or set the text content of an element.
+
+## Defernce between **createElement()** and **appendChild()** :
+- **createElement()** is used to create a new element.
+- **appendChild()** is used to add a new element to an existing element.
+## Defernce between **removeAttribute()** and **removeChild()** :
+- **removeAttribute()** is used to remove an attribute from an element.
+- **removeChild()** is used to remove a child element from an element.
+
+
 
