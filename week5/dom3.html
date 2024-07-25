@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom With Chai Or Code </title>
+</head>
+<body style="background-color: darkgrey; color: white; font-size: 20px;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">TUseday</div>
+        <div class="day">wensday</div>
+        <div class="day">Thusday</div>
+        <div class="day"> Friday</div>
+        <div class="day">Satarday</div>
+        <div class="day">Sunday</div>
+    </div>
+</body>
+</html>
+<script>
+    const parent = document.querySelector('.parent')
+    console.log(parent)//  rturn the array of all the elements with the class name parent
+    console.log(parent.children)// return (Html Collection  ) the array of all the child elements of the parent
+    console.log(parent.children[1].innerHTML)// return the inner html of the second child element of the parent
+
+    for(let i = 0; i < parent.children.length; i++){
+        console.log(parent.children[i].innerHTML)
+    }
+    parent.children[0].style.color = 'orange'
+
+    //parent properties 
+    console.log(parent.firstElementChild)// return the first child element of the parent
+    console.log(parent.lastElementChild)// return the last child element of the parent
+    console.log("Count the child  Elemnts : ",parent.childElementCount)// return the number of child elements of the parent
+    console.log("Nodes:", parent.childNodes)// return the array of all the child nodes of the parent
+    // Child to Parent
+    const dayone=document.querySelector('.day')
+    console.log("Child to parent",dayone.parentElement)// return the parent element of the childfirst child element of the parent
+    console.log("Next Sibling",dayone.nextElementSibling)// return the next sibling element of the child
+    console.log("Previous Sibling",dayone.previousElementSibling)// return the previous sibling element of the child
+
+
+    // Part 2->
+
+    // create another div and content uesing the js
+
+    const newdiv = document.createElement('div-new')// create a new div element
+    console.log(newdiv)// return the new div element
+    newdiv.className = 'new-div'// add a class to the new div element
+    newdiv.id = 22// add an id to the new div element
+    newdiv.setAttribute("title","New Title")// add a title to the new div element
+    // newdiv.innerText = "This is a new div element"// add text to the new div element
+    newdiv.style ="background-color: red; color: white; padding: 10px; margin: 10px;"// add style to the new div element
+    const addText=document.createTextNode("This is a new div element")// create a text node
+    newdiv.appendChild(addText)// add the text node to the new div element
+    document.body.appendChild(newdiv)// add the new div element to the body of the document
+
+</script>

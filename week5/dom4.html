@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom 4</title>
+</head>
+<body style="background-color: dimgrey; color: wheat; font-size: large;">
+    <ul class="lang">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Node</li>
+        <li>React</li>
+        <li>Vue</li>
+        <li>Angular</li>
+    </ul>
+</body>
+</html>
+<script>
+    // function addlang(lang){
+    //     const lan=document.createElement('li')
+    //     lan.innerText = `${lang}`;
+    //     document.querySelector('.lang').appendChild(lan);
+
+    // }
+    // addlang('Python');
+    // addlang('Go');
+    
+    // Add langauge way to optim
+    function addlangOptimz(lang){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.lang').appendChild(li)
+    }
+    addlangOptimz('Python');
+
+    //--------------------
+    const secondlang=document.querySelector('li:nth-child(2)')
+    // secondlang.innerHTML="MOjo"// no otpmiz
+    // OPtimz way 
+    const newli=document.createElement('li')
+    newli.textContent="Mojo"
+    secondlang.replaceWith(newli)
+
+    // CHange outer html
+    const firstlang=document.querySelector('li:first-child')
+    firstlang.outerHTML="<h1>React</h1>"
+
+    // reomve node
+    const lastlang=document.querySelector('li:last-child')
+    lastlang.remove()
+</script> 

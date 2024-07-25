@@ -8,11 +8,18 @@
 <body style="background-color: black; color: white; font-size: 20px; font-family: sans-serif">
     <div class="d">
         <h1 id ="title" class="head">Dom Learing  <span style="display: none;">Test the diifernce </span> With nitin</h1>
+        <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti sint magnam explicabo quas sequi necessitatibus voluptas, quam cupiditate libero molestiae, aperiam dolor id impedit nihil harum natus soluta optio nobis.</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-
+        <ul>
+            <li>Dom 1</li>
+            <li>Dom 2</li>
+            <li>Dom 3</li>
+            <li>Dom 4</li>
+            <li>Dom 5</li>
+        </ul>
     </div>
 </body>
-</html>
+</html> 
 <script>
 // console.log(document.getElementById('title').id)// return the id 
 // console.log(document.getElementById('title').className)// return the class name of the element
@@ -23,4 +30,33 @@ title.style.background="red"// set the background color of the element
 console.log(title.innerHTML) // Return the text content of the element this -Dom Learing  <span style="display: none;">Test the diifernce </span> With nitin
 console.log(title.innerText)// Return the text content of the element this -Dom Learing  Test the diifernce  With nitin
 console.log(title.textContent)//Return the text content of the element this -Dom Learing  Test the diifernce  With nitin 
+
+
+// Query Selector
+const Query_selctor=document.querySelector('h1')// return the first element with the class name test
+console.log(Query_selctor)
+const Query_selctor2=document.querySelector('li')// return the first element with the class name test
+Query_selctor2.style.background="green "// set the background color of the element
+console.log(Query_selctor2)
+const Query_selctor3=document.querySelectorAll('li')// return all the element with the class name test
+console.log(Query_selctor3)
+Query_selctor3.forEach((item)=>{item.style.background="yellow"
+    item.style.color="black"
+})// set the background color of all the element with the class name test
+
+// How to convert NodeList to Array
+const Query_selctor4=[...Query_selctor3]// return all the element with the class name test
+console.log(Query_selctor4)// How to convert NodeList to Array
+
+// Html Collections 
+const htmlCollection=document.getElementsByTagName('li')// return all the element with the class name test
+console.log(htmlCollection)
+
+// How to convert NodeList to Array
+const htmlCollection2=[...htmlCollection]// return all the element with the class name test
+console.log(htmlCollection2)// How to convert NodeList to Array
+
+htmlCollection2.forEach((item)=>{item.style.background="orange"
+    item.style.color="black"
+})// set the background color of all the element with the class name test
 </script>

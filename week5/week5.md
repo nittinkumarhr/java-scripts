@@ -151,5 +151,23 @@ The document is the root of the DOM hierarchy. It represents the entire HTML or 
 - **removeAttribute()** is used to remove an attribute from an element.
 - **removeChild()** is used to remove a child element from an element.
 
+## Defernce between **Html collection** and **NodeList** :
+- HTMLCollection only contains element nodes.
+- NodeList can contain any type of node, including element, attribute, and text nodes.
+
+
+## How to add html tag
+- We can add html tag by using **createElement()** method.
+- We can add html tag by using **appendChild()** method.
+- We can add html tag by using **innerHTML** property.
+
+## How to remove html tag
+- We can remove html tag by using **removeAttribute()** method.
+- We can remove html tag by using **removeChild()** method.
+- We can remove html tag by using **innerHTML** property.
+
+## how to edit html tag
+- We can edit html tag by using **innerHTML** property.
+- We can edit html tag by using **setAttribute()** method.
 
 
