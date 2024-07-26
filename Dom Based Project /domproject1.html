@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body class="main-body">
+        <h1>Color Scheme Switcher</h1>
+        <span class="buttion" id ='grey'></span>
+        <span class="buttion" id = 'white'></span>
+        <span class="buttion" id = 'blue'></span>
+        <span class="buttion" id ='yellow'></span>
+
+        <h2>
+            Try clicking on one the color above 
+            <span> TO change the background color of this Page!</span>
+        </h2>
+
+    
+</body>
+</html>
+<!-- Css Part -->
+<style>
+
+.main-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 250px;
+    box-sizing: border-box;
+}
+h1{
+    font-size: 40px;
+    border: 2px solid black;
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: brown;
+    background-color: rgb(238, 238, 238);
+    border-radius: 40px;
+}
+
+span.buttion{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid rgb(7, 7, 6);
+}
+ h2{
+     font-size: 20px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     padding: 20px;
+     border: 2px solid black;
+     color: brown;
+     background-color: rgb(238, 238, 238);
+     border-radius: 40px;
+ }
+ #grey{
+    background-color: dimgray;
+    border-color: gray;
+ }
+ #blue{
+    background-color: blue;
+    border-color: rgb(88, 88, 223);
+    
+ }
+ #yellow{
+    background-color: yellow;
+    border-color: rgb(238, 238, 0);
+ }
+</style>
+<!-- Java scripts Parts -->
+ <script>
+    const buttions=document.querySelectorAll('.buttion');
+    const body=document.querySelector('.main-body')
+    // console.log(buttions);
+    buttions.forEach(function(buttion){
+        // console.log(buttion);
+        buttion.addEventListener('click',function(e){body.style.backgroundColor=e.target.id})
+    })
+ </script>
