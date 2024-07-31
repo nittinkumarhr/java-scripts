@@ -1,4 +1,8 @@
+<<<<<<< HEAD
  <!DOCTYPE html>
+=======
+    <!DOCTYPE html>
+>>>>>>> 72b4200fad9c7845ea1fb6fba6f01a1021f073dc
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -70,7 +74,10 @@
         margin-bottom: 10px;
         border-radius: 20px;
         padding-left: 10px;
+<<<<<<< HEAD
         height: 30px;
+=======
+>>>>>>> 72b4200fad9c7845ea1fb6fba6f01a1021f073dc
        
     }
     button{
@@ -78,7 +85,11 @@
         width: 10vw;
         height: 30px;
         border-radius: 20px;
+<<<<<<< HEAD
         /* background-color: rgb(104, 82, 82); */
+=======
+        background-color: rgb(104, 82, 82);
+>>>>>>> 72b4200fad9c7845ea1fb6fba6f01a1021f073dc
     }
     h1{
         color: rgb(0, 0, 0);
@@ -102,6 +113,7 @@
 <!-- Js COde  -->
 <script>
    const form = document.querySelector('form');
+<<<<<<< HEAD
    console.log(form);
    form.addEventListener('submit', (e) =>{ e.preventDefault();
     const height=parseInt(document.querySelector('#height').value);
@@ -151,3 +163,19 @@
 );
 
 </script>
+=======
+   form.addEventListener('submit', (e) =>{ e.preventDefault();
+    const height=parseInt(document.querySelector('#height').value);
+    const weight=parseInt(document.querySelector('#Weight').value)
+    const results=document.querySelector('results')
+    if (height=='' || weight==''){
+        results.innerHTML='Please fill the values'
+        results.style.color='red'
+        
+    }
+    
+   }
+);
+
+</script>
+>>>>>>> 72b4200fad9c7845ea1fb6fba6f01a1021f073dc
