@@ -1,0 +1,140 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Project 4</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Number Guessing Game</h1>
+        <p>Try and guess a random number between 1 to 100.</p>
+        <p>You have 10 attempts to guess the right  number.</p>
+    </div>
+    <br>
+    <form class="form">
+        <label for="guess" id="guess">Enter your guess: </label>
+        <input type="text" id ="guess-filds" class="guessclass">
+        <input type="submit" id="submit" class="submitclass" value="Submit">
+    </form>
+    <div class="result">
+        <p>Pervious Guesses : <span class="guss"></span></p>
+        <p>Guesses Remaining : <span class="lastresult"></span></p>
+        <p class="loworhi"></p>
+    </div>
+</body>         
+</html>
+<style>
+    *{
+        padding: 0;
+        border: 0;
+        box-sizing:border-box;
+    }
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: whitesmoke;
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: whitesmoke;
+    }
+    #wrapper{
+        text-align: center;
+        margin-top: 50px;
+        border: 2px  solid wheat;
+        border-radius: 20px;
+        width: 500px;
+        padding: 20px;
+        font-weight: bold;
+    }
+    #wrapper h1{
+        color: yellow;
+        font-size: 50px;
+    }
+    .form{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid wheat;
+        border-radius: 20px;
+        width: 500px;
+        height: 150px;
+        padding: 20px;
+        
+    }
+    #guess{
+        font-size: 20px;
+    }
+    #guess-filds{
+        width: 200px;
+        height: 30px;
+        margin-top: 10px;
+        border-radius: 5px;
+        padding-left: 50px;
+    }
+    #submit{
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .result{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        /* border: 2px solid wheat; */
+        /* border-radius: 20px; */
+        width: 500px;
+        padding: 20px;
+    }
+</style>
+<script>
+    const number =document.querySelector('#guess-filds')
+    console.log(number.value)
+    const guss_number =document.getElementById('guss')
+    const remain =document.getElementById('lastresult')
+    const random_number= parseInt(Math.random()*100+1)    
+    const sub = document.getElementById('submit')
+    const loworhigh=document.querySelector('.loworhi')
+    let prevGuess =[]
+    let numGuess = 1
+    let playGame= true
+    if (playGame){
+        sub.addEventListener('click',function(e){
+            e.preventDefault()
+            console.log(number)
+
+            
+        })
+    }
+
+
+    function validateGuess(guess){
+        //ANCHOR - check Valid 
+    }
+    function checkGuess(guess){
+        //ANCHOR - CHeck GUESS
+    }
+    function DisplayMessage(message){
+        //ANCHOR - DOM Manipulation
+    }
+    function newGame(){
+        //ANCHOR - new Game
+    
+
+    }
+
+    function endGame(){
+        //ANCHOR - end game
+    }
+
+
+</script>

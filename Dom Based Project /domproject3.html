@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Project 3</title>
+</head>
+<body>
+    <h1>Dom Project 3</h1>
+    <div class="container">
+        <h2>Digital Watch</h2>
+        <div class="watch-con">
+            <h1 id="watch-key"></h1>
+        </div>
+    </div>
+</body>
+</html>
+<!-- Css for Styleing  -->
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #222;
+}
+h1{
+    color: white;
+    font-size: 100px;
+    text-align: center;
+    
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+h2  {
+    color: white;
+    font-size: 48px;
+    align-items: center;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+    margin: 200px;
+    border-radius: 20px;
+    background-color: #757272;
+}
+.watch-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    position: relative;
+    width: 500px;
+    margin: 30px;
+    background-color: #222;
+    border-radius: 20px;
+    border: 5px solid white;
+}
+
+#watch-key{
+    color: white;
+    font-size: 48px;
+}
+</style>
+<script>
+    const watch_key=document.getElementById("watch-key");
+    console.log(watch_key);
+    setInterval(function(){
+        let date =new Date();
+        // console.log(date.toLocaleTimeString());
+        watch_key.innerHTML=date.toLocaleTimeString();
+        watch_key.style.color="orange";
+        if(date.getSeconds() % 2 == 0){
+            watch_key.style.color="white";
+        }
+        
+    },1000)
+</script>
