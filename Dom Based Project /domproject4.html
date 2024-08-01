@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,21 +6,25 @@
     <title>Dom Project 4</title>
 </head>
 <body>
+    <div class="container">
     <div id="wrapper">
         <h1>Number Guessing Game</h1>
         <p>Try and guess a random number between 1 to 100.</p>
         <p>You have 10 attempts to guess the right  number.</p>
     </div>
-    <br>
+    <div class="message">
+    </div>
+    <button class="btn"> Restart</button>
     <form class="form">
         <label for="guess" id="guess">Enter your guess: </label>
-        <input type="text" id ="guess-filds" class="guessclass">
+        <input type="text" id ="guessfilds" class="guessclass">
         <input type="submit" id="submit" class="submitclass" value="Submit">
     </form>
     <div class="result">
         <p>Pervious Guesses : <span class="guss"></span></p>
-        <p>Guesses Remaining : <span class="lastresult"></span></p>
+        <p>Guesses Remaining : <span class="lastresult">10</span></p>
         <p class="loworhi"></p>
+    </div>
     </div>
 </body>         
 </html>
@@ -37,10 +41,24 @@
         justify-content: center;
         font-family: Arial, sans-serif;
         background-color: black;
-        color: whitesmoke;
+       
+        font-family: Arial, sans-serif;
+        background-color: black;
+        /* color: whitesmoke; */
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: Arial, sans-serif;
+        background-color: black;
+
+        /* color: rgb(240, 73, 23); */
         font-family: Arial, sans-serif;
         background-color: black;
         color: whitesmoke;
+
     }
     #wrapper{
         text-align: center;
@@ -56,7 +74,8 @@
         font-size: 50px;
     }
     .form{
-        margin-top: 20px;
+        
+        margin-top: 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -64,77 +83,169 @@
         border: 2px solid wheat;
         border-radius: 20px;
         width: 500px;
-        height: 150px;
+        height: 200px;
         padding: 20px;
         
     }
     #guess{
         font-size: 20px;
+        padding: 10px 20px;
     }
-    #guess-filds{
+    #guessfilds{
         width: 200px;
-        height: 30px;
+        height: 50px;
         margin-top: 10px;
         border-radius: 5px;
-        padding-left: 50px;
+        padding-left: 10px;
+        border-radius: 5px;
     }
     #submit{
         width: 100px;
-        height: 30px;
+        height: 50px;
         border-radius: 5px;
-        margin-top: 10px;
+        margin-top: 20px;
+        font-size: large;
+        background-color: chartreuse;
     }
     .result{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 20px;
+        margin-top: 10px;
         /* border: 2px solid wheat; */
         /* border-radius: 20px; */
         width: 500px;
         padding: 20px;
     }
+    p.loworhi{
+        font-size: 25px;
+        margin-top: 10px;
+    }
+    button.btn{
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+        margin-top: 10px;
+        background-color: rgb(238, 69, 18);
+        color: white;
+        font-size: 20px;
+    }
+    @media screen and (max-width: 768px){
+        body{
+            font-size: 18px;
+        }
+        #wrapper{
+            width: 90%;
+        }
+       .form{
+            width: 90%;
+        }
+       .result{
+            width: 90%;
+        }
+    }
+    @media screen and (max-width: 480px){
+        body{
+            font-size: 16px;
+        }
+        #wrapper{
+            width: 95%;
+        }
+       .form{
+            width: 95%;
+        }
+    }
 </style>
 <script>
-    const number =document.querySelector('#guess-filds')
-    console.log(number.value)
-    const guss_number =document.getElementById('guss')
-    const remain =document.getElementById('lastresult')
+    const form=document.querySelector(".message")   
+    const guss_number =document.querySelector('.guss')
+    const remain = document.querySelector('.lastresult')
     const random_number= parseInt(Math.random()*100+1)    
     const sub = document.getElementById('submit')
     const loworhigh=document.querySelector('.loworhi')
+    let restart = document.querySelector('.btn')
+    restart.style.visibility = 'hidden';
     let prevGuess =[]
-    let numGuess = 1
+    let numGuess = 10
     let playGame= true
     if (playGame){
         sub.addEventListener('click',function(e){
             e.preventDefault()
-            console.log(number)
-
-            
+            var number = document.querySelector('#guessfilds').value;
+            validateGuess(number);
+            document.querySelector('#guessfilds').value = ''
         })
+    }
+    else{
+        set_results('Game Ended! You ran out of attempts', 'red')
+        endGame()
     }
 
 
     function validateGuess(guess){
         //ANCHOR - check Valid 
-    }
-    function checkGuess(guess){
-        //ANCHOR - CHeck GUESS
-    }
-    function DisplayMessage(message){
-        //ANCHOR - DOM Manipulation
-    }
-    function newGame(){
-        //ANCHOR - new Game
+        if(isNaN(guess) || guess < 1 || guess > 100){
+            set_results('🤨 Please enter a valid number between 1 and 100', 'red')
+            return
+        }
+        //ANCHOR - check if guess is already made
+        else if (prevGuess.includes(guess)){
+            set_results('😬 You have already guessed that number', 'red')
+            return
+        }
+        else{
+            checkGuess(guess)
+            prevGuess.push(guess);
+            numGuess--
+            
+            remain.innerText=numGuess
+            guss_number.innerText=prevGuess.join(', ')
+        }
     
 
     }
+    function checkGuess(guess){
+        //ANCHOR - CHeck GUESS
+        if(guess == random_number){
+            set_results('🥸 Congratulations! You guessed the right number', 'green')
+            endGame()
+            playGame=false
+        }
+        else if(guess < random_number){
+            set_results(' 🥵 Too low! Try again', 'rgb(202, 74, 34)')
+        }
+        else{
+            set_results(' 🥶 Too high! Try again', 'rgb(43, 192, 238)')
+        }
+        if(numGuess == 0){
+            // set_results('You lost the game! The correct number was '+ random_number, 'orange')
+            endGame()
+            playGame=false
+        }
 
+    }
     function endGame(){
         //ANCHOR - end game
+        sub.removeEventListener('click', validateGuess)
+        document.querySelector('#guessfilds').disabled=true;
+        restart.style.visibility = 'visible';
+        restart.addEventListener('click',function(){
+            location.reload()
+        })
+
+
+
     }
-
-
+    function set_results(text,color){
+        form.innerHTML='';
+        const lan=document.createElement('h1')
+        lan.innerText=text
+        // console.log(lan.innerHTML)
+        lan.style.color=color
+        lan.style.paddingTop='50px'
+        lan.style.textAlign='center'
+        lan.style.fontSize='50px'
+        form.appendChild(lan);
+    }
 </script>
