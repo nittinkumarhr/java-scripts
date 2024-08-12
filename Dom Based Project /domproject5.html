@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM Project 5</h1>
+    <p>Color Animations </p>
+    <div>
+    <button id="start">Start</button>
+    <button id ="end">End</button> 
+    </div>  
+</body>
+</html>
+<!-- Css Code -->
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        
+    }
+    body{
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 20px;
+
+    }
+    p{
+        padding: 20px 20px;
+    }
+    #start, #end{
+        padding: 10px 20px;
+        background-color: red;
+        color: white;
+        border: none;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+</style>
+
+<!-- Java Scripts Code -->
+<script>
+    const startBtn = document.getElementById('start');
+    const endBtn = document.getElementById('end');
+    const body = document.querySelector('body');
+    let colorID="0123456789ABCDEF";
+    function colorPacker(){
+        let color = "#";
+        for(let i=0; i<6; i++){
+            color += colorID[Math.floor(Math.random()*16)];
+        }
+        return color;
+    }
+    let IntervalID;
+    startBtn.addEventListener('click', function(e){
+        if (!IntervalID) {
+        IntervalID = setInterval(changeBgColor,2000);
+        }
+        function changeBgColor() {
+            document.body.style.backgroundColor =colorPacker();
+        }
+    });
+    endBtn.addEventListener('click', function(e){
+        console.log("data ")
+        clearInterval(IntervalID);
+        IntervalID=null;
+
+    });
+    
+</script>
+
