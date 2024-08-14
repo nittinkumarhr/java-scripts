@@ -47,11 +47,36 @@
         }
         return color;
     }
+    function getRandomEmoji() {
+    const min = 0x1F600; // Start of the emoji range (😀)
+    const max = 0x1F64F; // End of the emoji range (🙇)
 
+    // Generate a random code point within the emoji range
+    const randomCodePoint = Math.floor(Math.random() * (max - min + 1)) + min;
+
+    // Convert the code point to an emoji
+    return String.fromCodePoint(randomCodePoint);
+}
+
+console.log(getRandomEmoji())
     animation.addEventListener('click', (e) => {
         const div = document.createElement('div');
         console.log(e   )
         // div.innerHTML="<h1>sssss</h1>";
+        div.innerHTML=getRandomEmoji();
+        div.style.display = 'inline-block';
+        div.style.fontFamily = 'Arial, sans-serif';
+        div.style.fontSize = '30px';
+        div.style.textAlign = 'center';
+        div.style.lineHeight = '100px';
+        div.style.cursor = 'pointer';
+        div.style.transition = 'all 0.5s ease';  // transition effect for div's properties
+        div.style.transformOrigin = '50% 50%'; // center of div
+        div.style.transform = 'rotate(0deg)'; // no rotation initially
+        div.style.zIndex = '100'; // on top of other elements
+        div.style.overflow = 'hidden'; // hide any overflowing content within div
+        div.style.position = 'absolute';    
+        div.style.left = `${e.clientX}px`;
         div.style.position = 'absolute';    
         div.style.left = `${e.x}px`;
         div.style.top = `${e.y}px`;
@@ -73,6 +98,6 @@
         setTimeout(() => { 
 
             div.remove();
-        }, 5000)
+        }, 10000)
     });
  </script>

@@ -48,7 +48,6 @@
 -   dispatchEvent
 
 #!SECTION----------------------------------------------------------------
-#  
-- Java Scripts -> Synchronized ANd Single Thread
- 
+# Promise
+ -  
 
